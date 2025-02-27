@@ -1,4 +1,4 @@
-﻿namespace ArduinoBluetooth
+namespace ArduinoBluetooth
 {
     partial class Form1
     {
@@ -40,11 +40,23 @@
             lblDurumText = new Label();
             gbGonder = new GroupBox();
             gpGelen = new GroupBox();
-            txtGelen = new TextBox();
             btnTemizle = new Button();
+            txtGelen = new TextBox();
+            pnlLed1 = new Panel();
+            lblLed1 = new Label();
+            pnlLed2 = new Panel();
+            lblLed2 = new Label();
+            pnlLed3 = new Panel();
+            lblLed3 = new Label();
+            pnlLed4 = new Panel();
+            lblLed4 = new Label();
             groupBox1.SuspendLayout();
             gbGonder.SuspendLayout();
             gpGelen.SuspendLayout();
+            pnlLed1.SuspendLayout();
+            pnlLed2.SuspendLayout();
+            pnlLed3.SuspendLayout();
+            pnlLed4.SuspendLayout();
             SuspendLayout();
             // 
             // label1
@@ -168,14 +180,6 @@
             gpGelen.TabStop = false;
             gpGelen.Text = "Gelen";
             // 
-            // txtGelen
-            // 
-            txtGelen.Location = new Point(6, 22);
-            txtGelen.Multiline = true;
-            txtGelen.Name = "txtGelen";
-            txtGelen.Size = new Size(266, 121);
-            txtGelen.TabIndex = 3;
-            // 
             // btnTemizle
             // 
             btnTemizle.Location = new Point(4, 149);
@@ -185,11 +189,95 @@
             btnTemizle.Text = "Temizle";
             btnTemizle.UseVisualStyleBackColor = true;
             // 
+            // txtGelen
+            // 
+            txtGelen.Location = new Point(6, 22);
+            txtGelen.Multiline = true;
+            txtGelen.Name = "txtGelen";
+            txtGelen.Size = new Size(266, 121);
+            txtGelen.TabIndex = 3;
+            // 
+            // pnlLed1
+            // 
+            pnlLed1.Controls.Add(lblLed1);
+            pnlLed1.Location = new Point(136, 330);
+            pnlLed1.Name = "pnlLed1";
+            pnlLed1.Size = new Size(57, 40);
+            pnlLed1.TabIndex = 11;
+            // 
+            // lblLed1
+            // 
+            lblLed1.AutoSize = true;
+            lblLed1.Location = new Point(13, 14);
+            lblLed1.Name = "lblLed1";
+            lblLed1.Size = new Size(32, 15);
+            lblLed1.TabIndex = 0;
+            lblLed1.Text = "Led1";
+            lblLed1.Click += lblLed1_Click;
+            // 
+            // pnlLed2
+            // 
+            pnlLed2.Controls.Add(lblLed2);
+            pnlLed2.Location = new Point(229, 330);
+            pnlLed2.Name = "pnlLed2";
+            pnlLed2.Size = new Size(57, 40);
+            pnlLed2.TabIndex = 12;
+            // 
+            // lblLed2
+            // 
+            lblLed2.AutoSize = true;
+            lblLed2.Location = new Point(13, 14);
+            lblLed2.Name = "lblLed2";
+            lblLed2.Size = new Size(32, 15);
+            lblLed2.TabIndex = 0;
+            lblLed2.Text = "Led2";
+            lblLed2.Click += lblLed2_Click;
+            // 
+            // pnlLed3
+            // 
+            pnlLed3.Controls.Add(lblLed3);
+            pnlLed3.Location = new Point(315, 330);
+            pnlLed3.Name = "pnlLed3";
+            pnlLed3.Size = new Size(57, 40);
+            pnlLed3.TabIndex = 13;
+            // 
+            // lblLed3
+            // 
+            lblLed3.AutoSize = true;
+            lblLed3.Location = new Point(13, 14);
+            lblLed3.Name = "lblLed3";
+            lblLed3.Size = new Size(32, 15);
+            lblLed3.TabIndex = 0;
+            lblLed3.Text = "Led3";
+            lblLed3.Click += lblLed3_Click;
+            // 
+            // pnlLed4
+            // 
+            pnlLed4.Controls.Add(lblLed4);
+            pnlLed4.Location = new Point(409, 330);
+            pnlLed4.Name = "pnlLed4";
+            pnlLed4.Size = new Size(57, 40);
+            pnlLed4.TabIndex = 14;
+            // 
+            // lblLed4
+            // 
+            lblLed4.AutoSize = true;
+            lblLed4.Location = new Point(13, 14);
+            lblLed4.Name = "lblLed4";
+            lblLed4.Size = new Size(32, 15);
+            lblLed4.TabIndex = 0;
+            lblLed4.Text = "Led4";
+            lblLed4.Click += lblLed4_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(603, 316);
+            ClientSize = new Size(603, 401);
+            Controls.Add(pnlLed4);
+            Controls.Add(pnlLed3);
+            Controls.Add(pnlLed2);
+            Controls.Add(pnlLed1);
             Controls.Add(gpGelen);
             Controls.Add(gbGonder);
             Controls.Add(groupBox1);
@@ -202,6 +290,14 @@
             gbGonder.PerformLayout();
             gpGelen.ResumeLayout(false);
             gpGelen.PerformLayout();
+            pnlLed1.ResumeLayout(false);
+            pnlLed1.PerformLayout();
+            pnlLed2.ResumeLayout(false);
+            pnlLed2.PerformLayout();
+            pnlLed3.ResumeLayout(false);
+            pnlLed3.PerformLayout();
+            pnlLed4.ResumeLayout(false);
+            pnlLed4.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -220,5 +316,13 @@
         private GroupBox gpGelen;
         private TextBox txtGelen;
         private Button btnTemizle;
+        private Panel pnlLed1;
+        private Label lblLed1;
+        private Panel pnlLed2;
+        private Label lblLed2;
+        private Panel pnlLed3;
+        private Label lblLed3;
+        private Panel pnlLed4;
+        private Label lblLed4;
     }
 }
