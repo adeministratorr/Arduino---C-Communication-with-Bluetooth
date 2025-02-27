@@ -1,4 +1,4 @@
-namespace ArduinoBluetooth
+﻿namespace ArduinoBluetooth
 {
     partial class Form1
     {

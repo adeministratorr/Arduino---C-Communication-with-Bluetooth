@@ -7,7 +7,7 @@ const int ledPins[] = {2, 3, 4, 5}; // LED pinleri
 void setup() {
   Serial.begin(9600);
   bluetooth.begin(9600);
-  Serial.println("Bluetooth modÃ¼lÃ¼ hazÄ±r.");
+  Serial.println("Bluetooth modülü hazýr.");
 
   for (int i = 0; i < 4; i++) {
     pinMode(ledPins[i], OUTPUT);
@@ -26,7 +26,7 @@ void loop() {
   if (Serial.available()) {
     String dataToSend = Serial.readStringUntil('\n');
     bluetooth.println(dataToSend);
-    Serial.print("GÃ¶nderilen veri: ");
+    Serial.print("Gönderilen veri: ");
     Serial.println(dataToSend);
   }
 }
@@ -57,6 +57,6 @@ void controlLEDs(String command) {
     digitalWrite(ledPins[3], LOW);
     bluetooth.println("LED4_OFF");
   } else {
-    bluetooth.println("GeÃ§ersiz komut.");
+    bluetooth.println("Geçersiz komut.");
   }
 }

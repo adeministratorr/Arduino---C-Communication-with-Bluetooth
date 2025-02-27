@@ -1,4 +1,4 @@
-using System.IO.Ports; //SerialPort sÄ±nÄ±fÄ±nÄ± kullanabilmek iÃ§in eklenen kÃ¼tÃ¼phane
+using System.IO.Ports; //SerialPort sýnýfýný kullanabilmek için eklenen kütüphane
 
 namespace ArduinoBluetooth
 {
@@ -33,8 +33,8 @@ namespace ArduinoBluetooth
 
         private string GetPortDescription(string portName)
         {
-            // Bu metot, port aÃ§Ä±klamasÄ±nÄ± almak iÃ§in kullanÄ±labilir.
-            // Åžu anda sadece port adÄ±nÄ± dÃ¶ndÃ¼rÃ¼yor, ancak daha fazla bilgi eklenebilir.
+            // Bu metot, port açýklamasýný almak için kullanýlabilir.
+            // Þu anda sadece port adýný döndürüyor, ancak daha fazla bilgi eklenebilir.
             return portName;
         }
 
@@ -43,8 +43,8 @@ namespace ArduinoBluetooth
             if (serialPort != null && serialPort.IsOpen)
             {
                 serialPort.Close();
-                lblConnectStatus.Text = "BaÄŸlÄ± DeÄŸil";
-                btnConnect.Text = "BaÄŸlan";
+                lblConnectStatus.Text = "Baðlý Deðil";
+                btnConnect.Text = "Baðlan";
                 // SerialPort_DataReceived event listener ekleniyor
                 serialPort.DataReceived += new SerialDataReceivedEventHandler(SerialPort_DataReceived);
             }
@@ -53,14 +53,14 @@ namespace ArduinoBluetooth
             {
                 serialPort = new SerialPort(cbComPort.SelectedItem.ToString(), int.Parse(cbBaud.SelectedItem.ToString()));
                 serialPort.Open();
-                lblConnectStatus.Text = "BaÄŸlÄ±";
+                lblConnectStatus.Text = "Baðlý";
                 lblConnectStatus.ForeColor = Color.Green;
                 lblConnectStatus.Font = new Font(lblConnectStatus.Font, FontStyle.Bold);
-                btnConnect.Text = "BaÄŸlantÄ±yÄ± Kes";
+                btnConnect.Text = "Baðlantýyý Kes";
             }
             catch
             {
-                lblConnectStatus.Text = "BaÄŸlÄ± DeÄŸil";
+                lblConnectStatus.Text = "Baðlý Deðil";
                 lblConnectStatus.ForeColor = Color.Red;
                 lblConnectStatus.Font = new Font(lblConnectStatus.Font, FontStyle.Bold);
             }
@@ -68,9 +68,9 @@ namespace ArduinoBluetooth
 
         private void btnGonder_Click(object sender, EventArgs e)
         {
-            if (serialPort != null && serialPort.IsOpen) //Seri port aÃ§Ä±ksa
+            if (serialPort != null && serialPort.IsOpen) //Seri port açýksa
             {
-                string dataToSend = txtGonder.Text; //GÃ¶nderilecek veriyi al
+                string dataToSend = txtGonder.Text; //Gönderilecek veriyi al
                 if (!string.IsNullOrEmpty(dataToSend))
                 {
                     serialPort.WriteLine(dataToSend);
@@ -78,7 +78,7 @@ namespace ArduinoBluetooth
             }
             else
             {
-                MessageBox.Show("Seri port baÄŸlÄ± deÄŸil.", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Seri port baðlý deðil.", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         private void SerialPort_DataReceived(object sender, SerialDataReceivedEventArgs e)
@@ -160,7 +160,7 @@ namespace ArduinoBluetooth
             }
             else
             {
-                MessageBox.Show("Seri port baÄŸlÄ± deÄŸil.", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Seri port baðlý deðil.", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -173,7 +173,7 @@ namespace ArduinoBluetooth
             }
             else
             {
-                MessageBox.Show("Seri port baÄŸlÄ± deÄŸil.", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Seri port baðlý deðil.", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -186,7 +186,7 @@ namespace ArduinoBluetooth
             }
             else
             {
-                MessageBox.Show("Seri port baÄŸlÄ± deÄŸil.", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Seri port baðlý deðil.", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -199,7 +199,7 @@ namespace ArduinoBluetooth
             }
             else
             {
-                MessageBox.Show("Seri port baÄŸlÄ± deÄŸil.", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Seri port baðlý deðil.", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
